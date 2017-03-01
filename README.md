@@ -75,7 +75,7 @@ Giải thích thêm về 4 chế độ của SSL và cách chọn hợp lí:
 
 ### Làm thế nào để biết Cloudflare đã hoạt động trên website?
 
-Có rất rất nhiều cách, trong đó, bạn có thể kiểm tra với công cụ [Pingdoms Tools](https://tools.pingdom.com), nếu header của website trả về có các dữ liệu sau đây thì chắc chắn website bạn đã cài đặt Cloudflare thành công. Nếu bạn chưa thấy thay đổi đáng kể về tốc độ thì có thể dùng phép ping như mình nói bên dưới, xem đã thay đổi sang IP của Cloudflare chưa.
+Có rất rất nhiều cách, trong đó, bạn có thể kiểm tra với công cụ [Pingdoms Tools](https://tools.pingdom.com), nếu header của website trả về có một trong các dữ liệu sau đây thì chắc chắn website bạn đã cài đặt Cloudflare thành công. Nếu bạn chưa thấy thay đổi đáng kể về tốc độ thì có thể dùng phép ping như mình nói bên dưới, xem đã thay đổi sang IP của Cloudflare chưa.
 
 ![Header Cloudflare trả về]
 (http://i.imgur.com/DRat91E.png)
