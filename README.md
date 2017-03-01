@@ -1,5 +1,7 @@
 #Chia sẻ cách sử dụng Cloudflare hiệu quả
 
+![Logo Cloudflare] (https://www.cloudflare.com/img/logo-cloudflare-dark.svg)
+
 ## Cấu hình DNS
 
 Quan trọng đầu tiên là phần cấu hình DNS để trỏ về hosting/server. Chỉ cần 2 record này thôi là quá đủ để sử dụng và cũng dễ thay đổi sau này, đó là:
