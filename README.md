@@ -4,8 +4,10 @@
 
 Quan trọng đầu tiên là phần cấu hình DNS để trỏ về hosting/server. Chỉ cần 2 record này thôi là quá đủ để sử dụng và cũng dễ thay đổi sau này, đó là:
 
-1. Record A, tên @. Value: điền địa chỉ IP của hosting hoặc VPS
-2. Record CNAME, tên www. Value điền @ vào và enter.
+Type | Name | Value
+-----|------|------
+A|@|Địa chỉ IP của hosting hoặc VPS
+CNAME|www|@
 
 ![Cấu hình DNS Cloudflare]
 (http://i.imgur.com/Gra7g2J.jpg)
@@ -36,3 +38,7 @@ Bạn có thể thêm Page Rules cho website để quản lý cache tốt hơn, 
 
 ![Cấu hình Page Rules]
 (http://i.imgur.com/Ajb6ot4.jpg)
+
+## Cấu hình SSL
+
+Hiện tại Google đã có nhiều cập nhật liên quan (và có thể là ưu tiên hơn) cho những website có sử dụng HTTPS. Tuy nhiên, nếu bạn vẫn chưa sẵn sàng để chuyển sang HTTPS, hãy tắt tính năng này đi ở tab Crypto, chuyển SSL thành Off. Việc này giúp Google không index website bạn dưới dạng HTTPS, nếu có tắt Cloudflare đi cũng không ảnh hưởng gì.
