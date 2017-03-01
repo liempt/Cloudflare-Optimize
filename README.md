@@ -65,10 +65,11 @@ Bạn có thể thêm Page Rules cho website để quản lý cache tốt hơn, 
 Hiện tại Google đã có nhiều cập nhật liên quan (và có thể là ưu tiên hơn) cho những website có sử dụng HTTPS. Tuy nhiên, nếu bạn vẫn chưa sẵn sàng để chuyển sang HTTPS, hãy tắt tính năng này đi ở tab Crypto, chuyển SSL thành Off. Việc này giúp Google không index website bạn dưới dạng HTTPS, nếu có tắt Cloudflare đi cũng không ảnh hưởng gì.
 
 Giải thích thêm về 4 chế độ của SSL và cách chọn hợp lí:
-- Off: không sử dụng HTTPS. Nếu có truy cập vào sẽ được tự động chuyển về phiên bản HTTP
-- Flexible SSL: sử dụng HTTPS. Kết nối từ người dùng đến Cloudflare là an toàn, tuy nhiên từ Cloudflare đến máy chủ gốc của bạn là không an toàn. Loại này được bật sẵn và mình cũng khuyên dùng nếu chế độ Full có vấn đề khi truy cập.
-- Full SSL: như Flexible nhưng kết nối từ Cloudflare đến máy chủ gốc là (khá) an toàn. Khá là bởi vì bạn có thể dùng chứng chỉ tự kí để sử dụng mà không bị cảnh báo như các trình duyệt vẫn hay làm. Khuyên dùng.
-- Full SSL (strict): như Full SSL nhưng Cloudflare yêu cầu máy chủ phải có chứng chỉ an toàn của một nhà cung cấp uy tín.
+
+- **Off**: không sử dụng HTTPS. Nếu có truy cập vào sẽ được tự động chuyển về phiên bản HTTP
+- **Flexible SSL**: sử dụng HTTPS. Kết nối từ người dùng đến Cloudflare là an toàn, tuy nhiên từ Cloudflare đến máy chủ gốc của bạn là không an toàn. Loại này được bật sẵn và mình cũng khuyên dùng nếu chế độ Full có vấn đề khi truy cập.
+- **Full SSL**: như Flexible nhưng kết nối từ Cloudflare đến máy chủ gốc là (khá) an toàn. Khá là bởi vì bạn có thể dùng chứng chỉ tự kí để sử dụng mà không bị cảnh báo như các trình duyệt vẫn hay làm. Khuyên dùng.
+- **Full SSL (strict)**: như Full SSL nhưng Cloudflare yêu cầu máy chủ phải có chứng chỉ an toàn của một nhà cung cấp uy tín.
 
 ## Kiểm tra và sửa lỗi
 
