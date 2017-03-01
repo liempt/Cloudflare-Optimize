@@ -1,5 +1,3 @@
-#Chia sẻ cách sử dụng Cloudflare hiệu quả
-
 ![Logo Cloudflare] (https://www.cloudflare.com/img/logo-cloudflare-dark.svg)
 
 [Cloudflare](https://cloudflare.com) là một dịch vụ DNS trung gian nâng cao, có nghĩa là ngoài nhiệm vụ phân giải IP để trình duyệt truy cập vào, Cloudflare còn nhiều tính năng khác, nổi bật là ẩn địa chỉ IP máy chủ, tối ưu tốc độ website, WAF,… Tuy nhiên có nhiều tính năng mà đa số anh em ít khi quan tâm tới nên mình chia sẻ để anh em sử dụng Cloudflare một cách hiệu quả nhất.
