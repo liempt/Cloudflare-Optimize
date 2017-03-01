@@ -24,11 +24,15 @@ Dùng Cloudflare đa số là để tối ưu website dành cho những website 
 
 Check tất cả các mục JS, CSS, HTML ở mục Minify. Dùng để nén tất cả dữ liệu của website lại (minify) nên nếu bạn nào dùng WordPress thì không nên cài plugin nào có tính năng này nữa vì như vậy thì hơi phí tài nguyên. Cloudflare đã làm hết cho chúng ta rồi.
 
-Tính năng Railguns mình thấy đa số hosting có memcache sẽ hỗ trợ, VPS cũng vậy. Nếu bạn thấy tính năng này có thể bật thì bật lên nhé.
+**Tính năng Railguns** mình thấy đa số hosting có memcache sẽ hỗ trợ, VPS cũng vậy. Nếu bạn thấy tính năng này có thể bật thì bật lên nhé.
 
-Tính năng Rocket Loader nói đơn giản là load JS chỉ khi load xong tất cả các nội dung khác trên trang. Do vậy khi bật lên có thể bạn sẽ thấy slide hình hiện lên chậm hơn, một số plugin hoạt động không tốt. Vì vậy bạn nên check console của trình duyệt, dạo một vòng website xem có lỗi gì xảy ra không nhé. Mình thì mình hay tắt đi.
+**Tính năng Rocket Loader** nói đơn giản là load JS chỉ khi load xong tất cả các nội dung khác trên trang. Do vậy khi bật lên có thể bạn sẽ thấy slide hình hiện lên chậm hơn, một số plugin hoạt động không tốt. Vì vậy bạn nên check console của trình duyệt, dạo một vòng website xem có lỗi gì xảy ra không nhé. Mình thì mình hay tắt đi.
 
-Vậy là xong rồi, 2 thứ quan trọng nhất đã được tùy chỉnh xong. Tiếp theo sẽ có một vài tinh chỉnh khá hay mà bạn có thể làm
+**Tính năng Accelerated Mobile Links (AMP)** vừa được bổ sung gần đây giúp cho website load nhanh hơn, ít tốn băng thông người đọc hơn khi tìm kiếm trên Google cũng khá hay. Tuy nhiên mình nghĩ bạn nên sử dụng các plugin có chức năng tương tự để có thể tùy chỉnh nhiều hơn thay vì dùng Cloudflare.
+
+Vậy là xong rồi, 2 thứ quan trọng nhất đã được tùy chỉnh xong. Tiếp theo sẽ có một vài tinh chỉnh khá hay mà bạn có thể làm.
+
+==============================================================================================
 
 ## Cấu hình Page Rules
 
