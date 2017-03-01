@@ -12,7 +12,7 @@ A|@|Địa chỉ IP của hosting hoặc VPS
 CNAME|www|@
 
 ![Cấu hình DNS Cloudflare]
-(http://i.imgur.com/Gra7g2J.jpg)
+(http://i.imgur.com/vt8qDkl.png)
 
 Vậy là xong, sau này nếu cần thêm sub-domain cùng chung IP như trên thì chỉ việc tạo 1 CNAME, tên là tên của sub-domain, value thì cũng là @. Tại sao lại @ mà lại không dùng record A để trỏ cho tiện? Đơn giản là vì sau này đổi hosting hoặc IP, bạn chỉ việc cấu hình lại record A @ thôi, không cần thay đổi toàn bộ các record khác dễ gây nhầm lẫn.
 
@@ -43,7 +43,7 @@ Tính năng này khá hay nhưng ít người dùng đến. Bạn có thể yêu
 Bạn có thể thêm Page Rules cho website để quản lý cache tốt hơn, ví dụ bên dưới là theo cấu trúc WordPress, thử xem sao nhé :)
 
 ![Cấu hình Page Rules]
-(http://i.imgur.com/Ajb6ot4.jpg)
+(http://i.imgur.com/kxxobTN.jpg)
 
 ## Cấu hình SSL
 
