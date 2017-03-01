@@ -2,6 +2,19 @@
 
 [Cloudflare](https://cloudflare.com) là một dịch vụ DNS trung gian nâng cao, có nghĩa là ngoài nhiệm vụ phân giải IP để trình duyệt truy cập vào website, Cloudflare còn nhiều tính năng vui vẻ khác, nổi bật là ẩn địa chỉ IP gốc của máy chủ, tối ưu tốc độ website, WAF (tường lửa),… Tuy nhiên có nhiều tính năng mà đa số anh em ít khi quan tâm tới nên mình chia sẻ để anh em sử dụng Cloudflare một cách hiệu quả nhất.
 
+## Table of Content
+
+1. [Cấu hình](https://github.com/mrsugar/Cloudflare-Optimize#cấu-hình)
+    1. [Cấu hình DNS](https://github.com/mrsugar/Cloudflare-Optimize#cấu-hình-dns)
+    2. [Kích hoạt nén resource](https://github.com/mrsugar/Cloudflare-Optimize#kích-hoạt-nén-resource)
+    3. [Cấu hình Page Rules](https://github.com/mrsugar/Cloudflare-Optimize#cấu-hình-page-rules)
+    4. [Cấu hình SSL](https://github.com/mrsugar/Cloudflare-Optimize#cấu-hình-ssl)
+2. [Xử lí một số lỗi thường gặp](https://github.com/mrsugar/Cloudflare-Optimize#kiểm-tra-và-sửa-lỗi)
+    1. [Kiểm tra Cloudflare đã hoạt động chưa](https://github.com/mrsugar/Cloudflare-Optimize#làm-thế-nào-để-biết-cloudflare-đã-hoạt-động-trên-website)
+    2. [Sửa lỗi ERR_TOO_MANY_REDIRECTS trên WordPress](https://github.com/mrsugar/Cloudflare-Optimize#bị-lỗi-neterr_too_many_redirects-khi-bật-ssl)
+    3. [Bị DDoS thì làm gì?](https://github.com/mrsugar/Cloudflare-Optimize#bị-ddos-thì-làm-gì)
+    4. [Chỉnh sửa js, css không thấy thay đổi thì làm gì?](https://github.com/mrsugar/Cloudflare-Optimize#cập-nhật-css-js-nhưng-trang-không-thay-đổi-gì)
+
 ## Cấu hình
 
 ### Cấu hình DNS
@@ -51,6 +64,12 @@ Bạn có thể thêm Page Rules cho website để quản lý cache tốt hơn, 
 
 Hiện tại Google đã có nhiều cập nhật liên quan (và có thể là ưu tiên hơn) cho những website có sử dụng HTTPS. Tuy nhiên, nếu bạn vẫn chưa sẵn sàng để chuyển sang HTTPS, hãy tắt tính năng này đi ở tab Crypto, chuyển SSL thành Off. Việc này giúp Google không index website bạn dưới dạng HTTPS, nếu có tắt Cloudflare đi cũng không ảnh hưởng gì.
 
+Giải thích thêm về 4 chế độ của SSL và cách chọn hợp lí:
+- Off: không sử dụng HTTPS. Nếu có truy cập vào sẽ được tự động chuyển về phiên bản HTTP
+- Flexible SSL: sử dụng HTTPS. Kết nối từ người dùng đến Cloudflare là an toàn, tuy nhiên từ Cloudflare đến máy chủ gốc của bạn là không an toàn. Loại này được bật sẵn và mình cũng khuyên dùng nếu chế độ Full có vấn đề khi truy cập.
+- Full SSL: như Flexible nhưng kết nối từ Cloudflare đến máy chủ gốc là (khá) an toàn. Khá là bởi vì bạn có thể dùng chứng chỉ tự kí để sử dụng mà không bị cảnh báo như các trình duyệt vẫn hay làm. Khuyên dùng.
+- Full SSL (strict): như Full SSL nhưng Cloudflare yêu cầu máy chủ phải có chứng chỉ an toàn của một nhà cung cấp uy tín.
+
 ## Kiểm tra và sửa lỗi
 
 ### Làm thế nào để biết Cloudflare đã hoạt động trên website?
@@ -67,13 +86,11 @@ Ngoài ra, một cách cổ điển hơn là ping tới tên miền của bạn,
 Well. Với trường hợp này, khi bạn đang sử dụng WordPress do chưa cài đặt plugin hỗ trợ của Cloudflare nên phát sinh lỗi. Để sửa thì làm theo các bước hướng dẫn sau nhé.
 
 1. Tắt SSL của Cloudflare đi (tiện thì làm, không thì bỏ qua cũng được)
-2. Chỉnh sửa tập tin wp-config.php, chèn đoạn code bên dưới vào, bên dưới, ngay sau <?php. Nhớ thay example.com thành tên miền của bạn. Bước này giúp bạn có thể truy cập trang admin của WordPress.
-
+2. Chỉnh sửa tập tin wp-config.php, chèn đoạn code này vào ngay bên dưới dòng <?php. Nhớ thay example.com thành tên miền của bạn. Bước này giúp bạn có thể truy cập trang admin của WordPress.
 ```
 define('WP_HOME', 'http://example.com');
 define('WP_SITEURL', 'http://example.com');
 ```
-
 3. Cài đặt plugin [Cloudflare Flexible SSL](https://vi.wordpress.org/plugins/cloudflare-flexible-ssl/) ngay và luôn.
 4. Chỉnh sửa tập tin wp-config.php. Từ hai đoạn code ở trên, sửa http:// thành https://
 5. Done!
